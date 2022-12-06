@@ -7,10 +7,10 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
 
-  plugins: [
-    process.env.NODE_ENV === 'production' && '@docusaurus/plugin-debug',
-  ].filter(Boolean),
-  
+  // plugins: [
+  //   process.env.NODE_ENV === 'production' && '@docusaurus/plugin-debug',
+  // ].filter(Boolean),
+
   title: 'My Site',
   tagline: 'Dinosaurs are cool',
   url: 'https://your-docusaurus-test-site.com',
@@ -27,16 +27,19 @@ const config = {
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
   // to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
+  // i18n: {
+  //   defaultLocale: 'en',
+  //   locales: ['en'],
+  // },
 
   presets: [
+    
     [
-      'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
+      
+      '@docusaurus/preset-classic',
+     
       ({
+        debug: true,
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
